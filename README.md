@@ -51,4 +51,4 @@ MIT
 
 ## 联系方式
 
-如有任何问题或建议，请提交 Issue 或发送邮件至 example@example.com 
+如有任何问题或建议，请提交 Issue 或发送邮件至 247301780@qq.com 
