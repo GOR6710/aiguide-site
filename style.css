@@ -1,0 +1,237 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --primary-color: #6366f1;
+    --primary-light: #818cf8;
+    --primary-dark: #4f46e5;
+    --secondary-color: #f5f5f5;
+    --text-color: #333;
+    --text-light: #666;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+body {
+    background-color: #f9fafb;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--primary-dark);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+header .plus {
+    color: var(--primary-color);
+}
+
+header .subtitle {
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background-color: white;
+    box-shadow: var(--card-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 15px 0;
+}
+
+.main-nav li {
+    flex: 0 0 auto;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition);
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.main-nav li i {
+    margin-right: 5px;
+}
+
+.main-nav li:hover {
+    background-color: #f5f7ff;
+    color: var(--primary-color);
+}
+
+.main-nav li.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Tools Section Styles */
+.tools-section {
+    display: none;
+    padding: 30px 0;
+}
+
+.tools-section.active {
+    display: block;
+}
+
+.tools-header {
+    margin-bottom: 20px;
+}
+
+.tools-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.tools-header h2 i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Tool Card Styles */
+.tool-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tool-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.tool-icon i {
+    color: white;
+    font-size: 24px;
+}
+
+.tool-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.tool-info p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+/* Footer Styles */
+footer {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    margin-top: 30px;
+}
+
+footer p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    .main-nav li {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 28px;
+    }
+    
+    .tools-header h2 {
+        font-size: 20px;
+    }
+}
+
+/* Tab categories */
+.tools-section {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
